@@ -71,7 +71,7 @@ function createProduct(){
         try{
           if(!isAdmin) return alert("You are not an admin")
           setLoading(true)
-           await axios.post('/api/destroy',{public_id:images.public_id},{
+           await axios.post('/api/destroyPhoto',{public_id:images.public_id},{
             headers:{Authorization:token}
            }) 
            setLoading(false) 

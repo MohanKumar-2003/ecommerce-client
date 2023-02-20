@@ -31,9 +31,31 @@ function Product(){
             if(product.checked) deleteProduct(product._id,product.images.public_id)
         })
     }
+    const getTopProducts=async (userId, page, limit) => {
+        try {
+          const purchases = await Purchase.aggregate([
+            { $match: { userId: userId } },
+            { $group: {
+                _id: { productId: '$productId', userId: '$userId' },
+                totalQuantity: { $sum: '$quantity' }
+              }
+            },
+            { $sort: { totalQuantity: -1 } },
+            { $skip: (page - 1) * limit },
+            { $limit: limit }
+          ]);
+      
+          const productIds = purchases.map(purchase => purchase._id.productId);
+          const topProducts = await Products.find({ _id: { $in: productIds } });
+      
+          return topProducts;
+        } catch (error) {
+          console.error(error);
+          throw new Error('Failed to get top products');
+        }
+      }
     
     const deleteProduct=async(id,public_id)=>{
-        console.log({id,public_id})
         try{
               setLoading(true)
               const destroyImg= axios.post('/api/destroy',{id},{
@@ -54,6 +76,18 @@ function Product(){
             alert(err.response.data.msg)
         }
        }
+       const updateProduct=async(id)=>{
+        try{
+          // var {visited}=req.body;
+          // products.visited++;
+          axios.patch(`/api/products/${id}`,{
+            headers:{Authorization:token}
+        })}
+        catch(err){
+          alert(err.response.data.msg)
+        }
+       }
+      
        if(loading) return <div className="products"><Loading /></div>
     return(
         <>
@@ -68,7 +102,7 @@ function Product(){
         <div className="products">
             {
                 products.map(product=>{
-                    return <ProductItem key={product._id} product={product} isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} />
+                    return <ProductItem key={product._id} product={product} isAdmin={isAdmin} deleteProduct={deleteProduct} handleCheck={handleCheck} updateProduct={updateProduct} />
                 })
             }
         </div>

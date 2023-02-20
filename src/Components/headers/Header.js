@@ -48,7 +48,8 @@ function Header(){
       </div>
       <ul  style={styleMenu}>
         <li><Link to='/'>{isAdmin ? 'Products': 'Shop'}</Link></li>
-        {isAdmin && adminRouter()}{
+        {isAdmin && adminRouter()}
+        {
           isLogged ? loggedRouter(): <li><Link to="/login">Login or Register</Link></li>
         }
         

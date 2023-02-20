@@ -4,7 +4,7 @@ import BtnRender from "./BtnRender";
 import './productitem.css'
 import axios from "axios";
 
-function ProductItem({product,isAdmin,deleteProduct,handleCheck}){
+function ProductItem({product,isAdmin,deleteProduct,handleCheck,updateProduct}){
    
  
     return(
@@ -20,7 +20,7 @@ function ProductItem({product,isAdmin,deleteProduct,handleCheck}){
                 </span>
                 <p>{product.description}</p>
             </div>
-            <BtnRender product={product} deleteProduct={deleteProduct}/>
+            <BtnRender product={product} deleteProduct={deleteProduct} updateProduct={updateProduct}/>
            
         </div>
     )

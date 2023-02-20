@@ -7,6 +7,9 @@ header{
     justify-content: space-around;
     align-items: center;
     border-bottom:1px solid #ddd;
+    box-shadow: 0 0 3px black;
+    border-radius: 6px;
+    margin-top: 1rem;
 }
 header .logo{
     flex: 1;
@@ -14,7 +17,9 @@ header .logo{
 header a{
     text-transform: uppercase;
     color: red;
-   
+}
+header .logo h1{
+    padding-left: 50px;
 }
 
 header ul li{

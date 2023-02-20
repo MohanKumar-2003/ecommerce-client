@@ -3,7 +3,7 @@
     overflow: hidden;
     height: 500px;
     padding:15px;
-    box-shadow: 0 0 15px #ddd;
+    box-shadow: 0 0 8px black;
     margin: 10px 0;
     position:relative;
     border-radius: 20px;
@@ -13,6 +13,7 @@
     height:300px;
     display:block;
     object-fit: cover ;
+    border-radius: 20px;
 }
 .product_box h2{
     width:100%;
@@ -57,10 +58,11 @@
     opacity: 0.5;
 }
 #btn_view{
-    background: skyblue;
+    background:blue;
     margin-left: 5px;
     box-shadow: 0 0 15px skyblue;
     border-radius: 10px;
+    opacity: 0.5;
 }
 .product_card input{
     position:absolute ;

@@ -1,25 +1,41 @@
+@font-face {
+  font-family: "Gamer";
+  src: local("Gamer"), url('assets/EvilEmpire-4BBVK.ttf') format('truetype');
+}
+
 * {
   padding: 0;
   box-sizing: border-box ;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
+  /* src: url(./assets/EvilEmpire-4BBVK.ttf); */
+  /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Imported !important; */
+  font-family: "Gamer";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* code {
+  font-family: Imported;
+  src: url(./assets/EvilEmpire-4BBVK.ttf);
+} */
 .App{
   max-width: 1230px;
   max-height: 100vh;
   margin:0 auto ;
   padding:0 20px;
   box-shadow: 0 0 35px white;
+  z-index: 100;
 }
+
+
+.headers {
+  z-index: 100;
+}
+
+.pages {
+  z-index: 100;
+}
+
 a{
   text-decoration: none;
 }

@@ -10,6 +10,7 @@ function ProductAPI(){
     const [result, setResult]=useState(0)
     useEffect(
         ()=>{
+
             const getProducts=async()=>{
                 const res=await axios.get(`/api/products?limit=${page*9}&${category}&${sort}&title[regex]=${search}`)
                 setProducts(res.data.products)
