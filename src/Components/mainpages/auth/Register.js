@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import mongoose from "mongoose";
+
 
 function Register(){
     const [user,setUser]=useState({

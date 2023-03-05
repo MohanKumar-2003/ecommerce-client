@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5f95e073.css",
+    "main.js": "/static/js/main.71363963.js",
+    "static/media/EvilEmpire-4BBVK.ttf": "/static/media/EvilEmpire-4BBVK.e3f442056830a75d62a8.ttf",
+    "index.html": "/index.html",
+    "static/media/Cart.svg": "/static/media/Cart.b399be59b1eea4f51df21aab8bef7970.svg",
+    "static/media/Close.svg": "/static/media/Close.75061b23a30feb0808803d7e9bafd034.svg",
+    "static/media/Menu.svg": "/static/media/Menu.407d96f0e9d1a36140913ade1478fa27.svg",
+    "main.5f95e073.css.map": "/static/css/main.5f95e073.css.map",
+    "main.71363963.js.map": "/static/js/main.71363963.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f95e073.css",
+    "static/js/main.71363963.js"
+  ]
+}
